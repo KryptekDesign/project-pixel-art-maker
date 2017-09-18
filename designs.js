@@ -8,4 +8,6 @@ let color = "#000000";
 const table = $("#pixel_canvas");
 
 function makeGrid(height, width) {}
-function clearGrid() {}
+function clearGrid() {
+  table.empty();
+}
