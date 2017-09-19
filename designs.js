@@ -9,7 +9,7 @@ const table = $("#pixel_canvas");
 
 // Create Table-based grid using user supplied height x width.
 function makeGrid(height, width) {
-  clearGrid();
+  table.empty();
   for (let row = 0; row < height; row++) {
     let tableRow = "<tr>";
     for (let col = 0; col < width; col++) {
@@ -18,11 +18,6 @@ function makeGrid(height, width) {
     tableRow = tableRow + "</tr>";
     table.append(tableRow);
   }
-}
-
-// Clears Table-based grid.
-function clearGrid() {
-  table.empty();
 }
 
 //
