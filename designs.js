@@ -1,7 +1,7 @@
 // Select color input
 // Select size input
 
-// When size is submitted by the user, call makeGrid()
+// Initial values.
 let height = 1;
 let width = 1;
 let color = "#000000";
@@ -20,11 +20,16 @@ function makeGrid(height, width) {
   }
 }
 
-//
+// When size is submitted by the user, call makeGrid().
 $("#sizePicker").submit(function(e) {
   e.preventDefault();
   let height = $("#input_height").val();
   let width = $("#input_width").val();
 
   makeGrid(height, width);
+});
+
+// When color is submitted by the user, set color value.
+$("#colorPicker").submit(function() {
+  color = $("#colorPicker").val();
 });
