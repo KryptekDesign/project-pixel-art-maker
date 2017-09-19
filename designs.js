@@ -4,7 +4,7 @@
 // Initial values.
 let height = 1;
 let width = 1;
-let color = "#000000";
+let color = $("#colorPicker").val();
 const table = $("#pixel_canvas");
 
 // Create Table-based grid using user supplied height x width.
@@ -29,7 +29,7 @@ $("#sizePicker").submit(function(e) {
   makeGrid(height, width);
 });
 
-// When color is submitted by the user, set color value.
-$("#colorPicker").submit(function() {
+// When color is changed by the user, set color value.
+$("#colorPicker").change(function() {
   color = $("#colorPicker").val();
 });
