@@ -18,6 +18,9 @@ function makeGrid(height, width) {
     tableRow = tableRow + "</tr>";
     table.append(tableRow);
   }
+  $("td").bind("contextmenu", function(e) {
+    e.preventDefault();
+  });
 }
 
 // When size is submitted by the user, call makeGrid().
@@ -32,4 +35,9 @@ $("#sizePicker").submit(function(e) {
 // When color is changed by the user, set color value.
 $("#colorPicker").change(function() {
   color = $("#colorPicker").val();
+});
+
+// Delegated color fill for table cells.
+table.on("click", "td", function() {
+  $(this).css("background-color", color);
 });
